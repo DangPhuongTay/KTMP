@@ -6,7 +6,7 @@ class DeleteWishlistTest extends TestCase
 {
   protected $Wishlist;
     public function setUp():void{
-       $this->Wishlist = new \App\Models\DeleteWishlist;
+       $this->Wishlist = new \App\Models\Wishlist;
     }
     public function testGetWishlistName():void
     {

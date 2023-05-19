@@ -6,7 +6,7 @@ class RegisterTest extends TestCase
 {
     protected $register;
     public function setUp():void{
-       $this->register = new \App\Models\Register;
+       $this->register = new \App\Models\User;
     }
     public function testGetUserName():void
     {

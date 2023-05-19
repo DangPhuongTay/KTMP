@@ -6,7 +6,7 @@ class DeleteProductTest extends TestCase
 {
     protected $deleteProduct;
     public function setUp():void{
-       $this->deleteProduct = new \App\Models\DeleteProduct;
+       $this->deleteProduct = new \App\Models\Product;
     }
     public function testGetId():void
     {
@@ -30,8 +30,19 @@ class DeleteProductTest extends TestCase
     }    
     public function testGetDeleteProduct():void
     {
-        $this->deleteProduct->setdeleteProduct(1,"iphone-14-pro-max-1.webp","iphone-14-pro-max-2.webp","iphone-14-pro-max-3.webp");
-        $this->assertEquals($this->deleteProduct ->getdeleteProduct(),[1,"iphone-14-pro-max-1.webp","iphone-14-pro-max-2.webp","iphone-14-pro-max-3.webp"]);
+        $this->deleteProduct->setdeleteProduct(
+            1,
+            "iphone-14-pro-max-1.webp",
+            "iphone-14-pro-max-2.webp",
+            "iphone-14-pro-max-3.webp");
+        $this->assertEquals($this->deleteProduct ->getdeleteProduct(),
+        [
+            1,
+            "iphone-14-pro-max-1.webp",
+            "iphone-14-pro-max-2.webp",
+            "iphone-14-pro-max-3.webp"
+        ]
+    );
         $this->assertArrayHasKey(3,$this->deleteProduct->getdeleteProduct());
     }  
 }

@@ -6,7 +6,7 @@ class LoginTest extends TestCase
 {
     protected $login;
     public function setUp():void{
-       $this->login = new \App\Models\Login;
+       $this->login = new \App\Models\User;
     }
  
     public function testGetUserEmail():void

@@ -6,7 +6,7 @@ class UpdatePasswordTest extends TestCase
 {
     protected $UpdatePassword;
     public function setUp():void{
-       $this->UpdatePassword = new \App\Models\UpdatePassword;
+       $this->UpdatePassword = new \App\Models\User;
     }
     public function testGetUserName():void
     {
@@ -28,7 +28,7 @@ class UpdatePasswordTest extends TestCase
         $this->UpdatePassword->setConfirmNewPassword('matkhaumoi');
         $this->assertEquals( $this->UpdatePassword->getConfirmNewPassword(),'matkhaumoi');
     }  
-    public function testGetUserInfoUser():void
+    public function testGetUpdatePassword():void
     {
         $this->UpdatePassword->setUpdatePassword('TayDang','matkhaucu','matkhaumoi','matkhaumoi');
         $this->assertEquals($this->UpdatePassword ->getUpdatePassword(),['TayDang','matkhaucu','matkhaumoi','matkhaumoi']);

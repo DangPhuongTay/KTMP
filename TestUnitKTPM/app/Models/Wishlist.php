@@ -43,4 +43,13 @@ class Wishlist{
     public function getInfoWishlist(){
        return [$this->Wishlist, $this->WishlistPid,$this->WishlistName,$this->WishlistPrice,$this->WishlistImage];
     }
+   
+    public function setDeleteWishlist($use_id,$name){
+        $this->Wishlist=$use_id;
+        $this->WishlistName=$name;
+    }
+    
+    public function getDeleteWishlist(){
+       return [$this->Wishlist,$this->WishlistName];
+    }
 }
